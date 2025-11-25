@@ -1,0 +1,100 @@
+:root {
+    --bg: #0b0b0b;
+    --text: #ffffff;
+    --text-dim: #888888;
+    --accent: #3b82f6; /* Bleu technique un peu plus "IUT Info" */
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; cursor: none; }
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    overflow: hidden;
+    height: 100vh; width: 100vw;
+}
+
+/* --- CURSOR --- */
+.cursor {
+    position: fixed; width: 8px; height: 8px; background: white;
+    border-radius: 50%; pointer-events: none; z-index: 9999;
+    transform: translate(-50%, -50%); transition: width 0.2s, height 0.2s;
+}
+.cursor-follower {
+    position: fixed; width: 40px; height: 40px;
+    border: 1px solid rgba(255,255,255,0.3); border-radius: 50%;
+    pointer-events: none; z-index: 9998;
+    transform: translate(-50%, -50%); transition: transform 0.1s ease-out;
+}
+
+/* --- UI --- */
+.fixed-nav {
+    position: fixed; top: 0; left: 0; width: 100%;
+    padding: 30px 50px; display: flex; justify-content: space-between; align-items: center;
+    z-index: 100; mix-blend-mode: difference;
+}
+.logo { font-family: 'Syncopate', sans-serif; font-weight: 700; letter-spacing: 2px; }
+.status { font-size: 0.7rem; display: flex; align-items: center; gap: 10px; color: #aaa; letter-spacing: 1px;}
+.pulse { width: 6px; height: 6px; background: #00ff00; border-radius: 50%; box-shadow: 0 0 8px #00ff00; }
+.menu-btn { font-weight: bold; font-size: 0.8rem; letter-spacing: 1px; border: 1px solid #fff; padding: 5px 10px;}
+
+.progress-counter {
+    position: fixed; bottom: 30px; left: 50px; font-family: 'Syncopate';
+    font-size: 1rem; z-index: 100; mix-blend-mode: difference;
+}
+.divider { color: var(--text-dim); }
+
+/* --- SCROLL --- */
+.scroll-container {
+    display: flex; height: 100vh; width: max-content; will-change: transform;
+}
+
+.panel {
+    height: 100vh; display: flex; flex-direction: column; justify-content: center;
+    padding: 0 5vw; flex-shrink: 0; border-right: 1px solid #1a1a1a;
+}
+
+/* --- SECTIONS --- */
+.intro { width: 85vw; }
+.huge-text {
+    font-family: 'Syncopate', sans-serif; font-size: 7vw;
+    line-height: 0.95; font-weight: 700; text-transform: uppercase;
+}
+.outline { color: transparent; -webkit-text-stroke: 2px white; }
+.sub-intro { margin-top: 40px; font-size: 1.1rem; color: var(--text-dim); max-width: 500px; line-height: 1.6;}
+
+.project { width: 65vw; position: relative; }
+.project-img { width: 100%; height: 55%; overflow: hidden; margin-bottom: 30px; }
+.project-img img {
+    width: 100%; height: 100%; object-fit: cover;
+    filter: grayscale(100%) contrast(1.2); transition: transform 0.7s ease, filter 0.5s ease;
+}
+.project:hover img { filter: grayscale(0%); transform: scale(1.03); }
+
+.project-info .cat { color: var(--accent); font-size: 0.7rem; letter-spacing: 2px; font-weight: bold; display: block; margin-bottom: 10px;}
+.project-info h2 { font-size: 3.5rem; line-height: 1; margin: 0 0 20px 0; font-family: 'Syncopate'; }
+.project-info .desc { font-size: 0.9rem; color: var(--text-dim); max-width: 400px; margin-bottom: 20px; }
+.btn-link { text-decoration: none; color: white; border-bottom: 1px solid white; padding-bottom: 5px; font-size: 0.8rem; transition: 0.3s;}
+.btn-link:hover { color: var(--accent); border-color: var(--accent); }
+
+.skills { width: 60vw; background: #111; }
+.skill-list { display: flex; flex-direction: column; justify-content: center; height: 100%; }
+.skill-item {
+    font-size: 4vw; font-weight: 800; text-transform: uppercase;
+    color: #222; transition: 0.3s; cursor: pointer; line-height: 1.1; font-family: 'Syncopate';
+}
+.skill-item:hover { color: white; transform: translateX(30px); }
+.skill-item.outline { -webkit-text-stroke: 1px #444; color: transparent; }
+.skill-item.outline:hover { -webkit-text-stroke: 1px white; color: transparent; }
+
+.contact { width: 80vw; align-items: center; text-align: center; }
+.contact h1 { font-family: 'Syncopate'; font-size: 3rem; margin-bottom: 20px; color: var(--text-dim); }
+.email-link {
+    font-size: 5vw; color: white; text-decoration: none; font-family: 'Syncopate'; font-weight: 700;
+    border-bottom: 3px solid transparent; transition: 0.3s;
+}
+.email-link:hover { border-bottom-color: var(--accent); }
+.socials { margin-top: 60px; display: flex; gap: 40px; font-size: 1rem; letter-spacing: 1px;}
+.socials a { color: var(--text-dim); text-decoration: none; border: 1px solid #333; padding: 10px 20px; border-radius: 50px; transition: 0.3s;}
+.socials a:hover { color: white; border-color: white; background: #222; }
