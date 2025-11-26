@@ -44,8 +44,11 @@
             <div class="project-info">
                 <span class="cat">WEB / JAVASCRIPT / HTML</span>
                 <h2>QUESTIONARY <br> GENERATOR</h2>
-                <p class="desc">Web application built for IUT Limoges to create and manage questionnaires: authoring, conditional logic, client-side validation, and result aggregation.</p>
-                <a href="https://github.com/Mdeterne/Web-app-questionary" class="btn-link">VIEW ON GITHUB</a>
+                <p class="desc">Web application built for IUT Limoges to create and manage questionnaires.</p>
+                <div class="btn-group">
+                    <a href="https://github.com/Mdeterne/Web-app-questionary" class="btn-link">VIEW ON GITHUB</a>
+                    <button class="btn-more" data-id="questionary">LEARN MORE +</button>
+                </div>
             </div>
         </section>
 
@@ -56,8 +59,11 @@
             <div class="project-info">
                 <span class="cat">JAVA / JAVAFX / JUNIT</span>
                 <h2>LATICE <br> BOARD GAME</h2>
-                <p class="desc">Development of a Haitian board game. Thorough unit testing with JUnit and Mockito.</p>
-                <a href="https://github.com/julesgayet/latice" target="_blank" class="btn-link">VIEW ON GITHUB</a>
+                <p class="desc">Development of a Haitian board game with unit testing.</p>
+                <div class="btn-group">
+                    <a href="https://github.com/julesgayet/latice" target="_blank" class="btn-link">VIEW ON GITHUB</a>
+                    <button class="btn-more" data-id="latice">LEARN MORE +</button>
+                </div>
             </div>
         </section>
 
@@ -68,8 +74,11 @@
             <div class="project-info">
                 <span class="cat">SYSADMIN / LINUX / CISCO</span>
                 <h2>NETWORK <br> ARCHITECTURE</h2>
-                <p class="desc">Multi-zone design (Servers, Staff, Clients). Routing, DHCP, and Apache services.</p>
-                <a href="https://github.com/LOI-mln/virtual-network" class="btn-link">VIEW ARCHITECTURE</a>
+                <p class="desc">Multi-zone design (Servers, Staff, Clients). Routing and DHCP.</p>
+                <div class="btn-group">
+                    <a href="https://github.com/LOI-mln/virtual-network" class="btn-link">VIEW ARCHITECTURE</a>
+                    <button class="btn-more" data-id="network">LEARN MORE +</button>
+                </div>
             </div>
         </section>
 
@@ -80,7 +89,8 @@
             <div class="project-info">
                 <span class="cat">WEB / HTML / CSS / PHP</span>
                 <h2>E-COMMERCE <br> WEBSITE</h2>
-                <p class="desc">Complete e-commerce site: product catalog, user cart, and payment system. To sale product and make money with it. Today the site is active so I continue to maintain it. I keep it secret, to protect my business.</p>
+                <p class="desc">Complete e-commerce site: product catalog, user cart, and payment system.</p>
+                <button class="btn-more" data-id="ecommerce">LEARN MORE +</button>
             </div>
         </section>
 
@@ -91,8 +101,11 @@
             <div class="project-info">
                 <span class="cat">PYTHON / ALGO</span>
                 <h2>MINI-GAMES <br> CONSOLE</h2>
-                <p class="desc">Collection of command-line mini-games. Structured programming and modular design.</p>
-                <a href="https://github.com/krousseau19/SAE1.01-1.02" target="_blank" class="btn-link">VIEW CODE</a>
+                <p class="desc">Collection of command-line mini-games. Modular design.</p>
+                <div class="btn-group">
+                    <a href="https://github.com/krousseau19/SAE1.01-1.02" target="_blank" class="btn-link">VIEW CODE</a>
+                    <button class="btn-more" data-id="minigames">LEARN MORE +</button>
+                </div>
             </div>
         </section>
 
@@ -116,6 +129,12 @@
         </section>
 
     </main>
+
+    <div id="detail-overlay">
+        <button id="close-detail">CLOSE <i class="fa-solid fa-xmark"></i></button>
+        <div id="detail-content">
+            </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
