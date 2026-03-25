@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JULES GAYET | PORTFOLIO</title>
-    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Inter:wght@300;400&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <div class="cursor"></div>
@@ -16,25 +19,37 @@
     <nav class="fixed-nav">
         <div class="logo">JULES.GAYET</div>
         <div class="status">
-            <span class="pulse"></span> OPEN FOR INTERNATIONAL INTERNSHIP
+            <span class="pulse"></span> <span data-i18n="status">LOOKING FOR A WORK-STUDY PROGRAM</span>
         </div>
-        <div class="menu-btn">IUT LIMOGES</div>
+        <div class="nav-right">
+            <div class="lang-switcher">
+                <span class="lang-btn active" data-lang="en">EN</span>
+                <span class="lang-divider">/</span>
+                <span class="lang-btn" data-lang="fr">FR</span>
+            </div>
+            <div class="menu-btn">IUT LIMOGES</div>
+        </div>
     </nav>
 
-    <div class="progress-counter">01 <span class="divider">/</span> 07</div>
+    <div class="progress-counter">01 <span class="divider">/</span> 06</div>
 
     <main class="scroll-container">
-        
+
         <section class="panel intro">
             <div class="huge-text">
-                <div>COMPUTER</div>
-                <div class="outline">SCIENCE</div>
-                <div>STUDENT</div>
+                <div data-i18n="intro1">COMPUTER</div>
+                <div class="outline" data-i18n="intro2">SCIENCE</div>
+                <div data-i18n="intro3">STUDENT</div>
             </div>
             <div class="sub-intro">
-                <p>Computer Science Student at Limoges.</p>
-                <p>Passionate about development and innovation.</p>
+                <p data-i18n="sub_intro1">Computer Science Student at Limoges.</p>
+                <p data-i18n="sub_intro2">Passionate about development and innovation.</p>
+
+                <p style="margin-top: 30px;" data-i18n="scroll_right">
+                    Scroll right to learn more <i class="fa-solid fa-arrow-right"></i>
+                </p>
             </div>
+
         </section>
 
         <section class="panel project">
@@ -42,12 +57,12 @@
                 <img src="assets/questionary.png" alt="Online Questionnaire">
             </div>
             <div class="project-info">
-                <span class="cat">WEB / JAVASCRIPT / HTML</span>
-                <h2>QUESTIONARY <br> GENERATOR</h2>
-                <p class="desc">Web application built for IUT Limoges to create and manage questionnaires.</p>
+                <span class="cat" data-i18n="cat_questionary">WEB / JAVASCRIPT / PHP</span>
+                <h2 data-i18n="title_questionary">QUESTIONARY <br> GENERATOR</h2>
+                <p class="desc" data-i18n="desc_questionary">Web application built for IUT Limoges to create and manage questionnaires.</p>
                 <div class="btn-group">
-                    <a href="https://github.com/Mdeterne/Web-app-questionary" class="btn-link">VIEW ON GITHUB</a>
-                    <button class="btn-more" data-id="questionary">LEARN MORE +</button>
+                    <a href="https://github.com/Mdeterne/php-mariadb-Questionary" class="btn-link" data-i18n="view_github">VIEW ON GITHUB</a>
+                    <button class="btn-more" data-id="questionary" data-i18n="learn_more">LEARN MORE +</button>
                 </div>
             </div>
         </section>
@@ -57,27 +72,12 @@
                 <img src="assets/latice.png" alt="Latice Board Game">
             </div>
             <div class="project-info">
-                <span class="cat">JAVA / JAVAFX / JUNIT</span>
-                <h2>LATICE <br> BOARD GAME</h2>
-                <p class="desc">Development of a Haitian board game with unit testing.</p>
+                <span class="cat" data-i18n="cat_latice">JAVA / JAVAFX / JUNIT</span>
+                <h2 data-i18n="title_latice">LATICE <br> BOARD GAME</h2>
+                <p class="desc" data-i18n="desc_latice">Development of a Haitian board game with unit testing.</p>
                 <div class="btn-group">
-                    <a href="https://github.com/julesgayet/latice" target="_blank" class="btn-link">VIEW ON GITHUB</a>
-                    <button class="btn-more" data-id="latice">LEARN MORE +</button>
-                </div>
-            </div>
-        </section>
-
-        <section class="panel project">
-            <div class="project-img">
-                <img src="assets/network.png" alt="Network Architecture">
-            </div>
-            <div class="project-info">
-                <span class="cat">SYSADMIN / LINUX / CISCO</span>
-                <h2>NETWORK <br> ARCHITECTURE</h2>
-                <p class="desc">Multi-zone design (Servers, Staff, Clients). Routing and DHCP.</p>
-                <div class="btn-group">
-                    <a href="https://github.com/LOI-mln/virtual-network" class="btn-link">VIEW ARCHITECTURE</a>
-                    <button class="btn-more" data-id="network">LEARN MORE +</button>
+                    <a href="https://github.com/julesgayet/latice" target="_blank" class="btn-link" data-i18n="view_github">VIEW ON GITHUB</a>
+                    <button class="btn-more" data-id="latice" data-i18n="learn_more">LEARN MORE +</button>
                 </div>
             </div>
         </section>
@@ -87,25 +87,19 @@
                 <img src="assets/ecommerce.png" alt="E-commerce">
             </div>
             <div class="project-info">
-                <span class="cat">WEB / HTML / CSS / PHP</span>
-                <h2>E-COMMERCE <br> WEBSITE</h2>
-                <p class="desc">Complete e-commerce site: product catalog, user cart, and payment system.</p>
-                <button class="btn-more" data-id="ecommerce">LEARN MORE +</button>
+                <span class="cat" data-i18n="cat_ecommerce">WEB / HTML / CSS / PHP</span>
+                <h2 data-i18n="title_ecommerce">E-COMMERCE <br> WEBSITE</h2>
+                <p class="desc" data-i18n="desc_ecommerce">Complete e-commerce site: product catalog, user cart, and payment system.</p>
+                <button class="btn-more" data-id="ecommerce" data-i18n="learn_more">LEARN MORE +</button>
             </div>
         </section>
 
-        <section class="panel project">
-            <div class="project-img">
-                <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=2669&auto=format&fit=crop" alt="Python Code">
-            </div>
-            <div class="project-info">
-                <span class="cat">PYTHON / ALGO</span>
-                <h2>MINI-GAMES <br> CONSOLE</h2>
-                <p class="desc">Collection of command-line mini-games. Modular design.</p>
-                <div class="btn-group">
-                    <a href="https://github.com/krousseau19/SAE1.01-1.02" target="_blank" class="btn-link">VIEW CODE</a>
-                    <button class="btn-more" data-id="minigames">LEARN MORE +</button>
-                </div>
+        <section class="panel more-projects">
+            <div class="more-content">
+                <i class="fa-brands fa-github huge-icon"></i>
+                <h2 data-i18n="see_more_title">WANT TO SEE MORE?</h2>
+                <p data-i18n="see_more_desc">Discover all my other projects, experiments, and source codes on GitHub.</p>
+                <a href="https://github.com/julesgayet" target="_blank" class="btn-github" data-i18n="visit_github">VISIT MY GITHUB</a>
             </div>
         </section>
 
@@ -120,7 +114,7 @@
         </section>
 
         <section class="panel contact">
-            <h1>LET'S CONNECT</h1>
+            <h1 data-i18n="contact_title">CLICK TO CONNECT</h1>
             <a href="mailto:jules.gayet@etu.unilim.fr" class="email-link">JULES.GAYET@ETU</a>
             <div class="socials">
                 <a href="https://github.com/julesgayet" target="_blank">GITHUB</a>
@@ -131,11 +125,14 @@
     </main>
 
     <div id="detail-overlay">
-        <button id="close-detail">CLOSE <i class="fa-solid fa-xmark"></i></button>
+        <button id="close-detail"><span data-i18n="close_detail">CLOSE</span> <i class="fa-solid fa-xmark"></i></button>
         <div id="detail-content">
-            </div>
+        </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="js/translations.js"></script>
+    <script src="js/projects.js"></script>
+    <script src="js/script.js"></script>
 </body>
+
 </html>
