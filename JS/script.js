@@ -61,24 +61,26 @@ document.addEventListener('mousemove', (e) => {
     follower.style.transform = `translate(${e.clientX - 20}px, ${e.clientY - 20}px)`;
 });
 
-const hoverables = document.querySelectorAll('a, .skill-item, .project-img, button, .lang-btn');
-hoverables.forEach(el => {
-    el.addEventListener('mouseenter', () => {
+document.addEventListener('mouseover', (e) => {
+    if (e.target.closest('a, .skill-item, .project-img, button, .lang-btn, .tech-link')) {
         cursor.style.transform = 'translate(-50%, -50%) scale(0)';
         follower.style.width = '40px';
         follower.style.height = '40px';
         follower.style.backgroundColor = 'white';
         follower.style.mixBlendMode = 'difference';
         follower.style.border = 'none';
-    });
-    el.addEventListener('mouseleave', () => {
+    }
+});
+
+document.addEventListener('mouseout', (e) => {
+    if (e.target.closest('a, .skill-item, .project-img, button, .lang-btn, .tech-link')) {
         cursor.style.transform = 'translate(-50%, -50%) scale(1)';
         follower.style.width = '40px';
         follower.style.height = '40px';
         follower.style.backgroundColor = 'transparent';
         follower.style.mixBlendMode = 'normal';
         follower.style.border = '1px solid rgba(255,255,255,0.3)';
-    });
+    }
 });
 
 // 5. LOGIQUE DU DETAIL OVERLAY
