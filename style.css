@@ -540,3 +540,8 @@ sup { font-size: .6em; }
   .live::after { animation: none; }
   .btn, .stat, .other { transition: none; }
 }
+
+/* Ligne « Mon rôle » sous les points d'un projet */
+.role { margin-top: 20px; padding: 14px 16px; border-radius: 12px; background: var(--surface); border: 1px solid var(--line); font-size: 14.5px; line-height: 1.5; color: var(--muted); }
+.role b { display: block; margin-bottom: 2px; font: 500 11.5px/1.4 var(--mono); text-transform: uppercase; letter-spacing: .06em; color: var(--tint-ink, var(--accent)); }
+.project-feature .role { margin-top: 18px; }

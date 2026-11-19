@@ -105,14 +105,17 @@
             <div>
               <p class="project-kicker"><span class="dot"></span>Projet phare · En production à l'IUT · Équipe de 4</p>
               <h3>Unilim EDT</h3>
-              <p class="project-pitch">Le générateur d'emplois du temps de l'IUT de Limoges. Les trois promotions planifiées en un clic, sans conflit de salle ni d'enseignant.</p>
+              <p class="project-pitch">L'outil qui fabrique les emplois du temps de l'IUT de Limoges, utilisé par l'IUT lui-même.</p>
               <p class="stack">Laravel · Vue 3 · Python / OR-Tools · MariaDB · Docker</p>
             </div>
-            <ul class="points">
-              <li><b>Alertes du prévisionnel</b> : je détecte les surcharges d'enseignants et de groupes, puis je propose une correction applicable en un clic.</li>
-              <li><b>Solveur</b> : cours fixés, salles d'examen et samedis respectés par le générateur.</li>
-              <li><b>CI/CD et sécurité</b> : lint, tests, audit des dépendances, déploiement plus sûr, durcissement de l'API. Plus de 100 commits de ma part.</li>
-            </ul>
+            <div>
+              <ul class="points">
+                <li><b>Génère la semaine des 3 promotions en un clic</b>, sans qu'un enseignant, un groupe ou une salle soit pris deux fois.</li>
+                <li><b>Se retouche à la main</b> : on déplace un cours, on en ajoute, et chacun exporte son emploi du temps dans son agenda.</li>
+                <li><b>Prépare l'année à l'avance</b> : le prévisionnel répartit les heures, signale quand un enseignant ou un groupe en a trop et propose la correction.</li>
+              </ul>
+              <p class="role"><b>Mon rôle</b> Les alertes du prévisionnel et leurs corrections, des règles du générateur, et la mise en ligne sécurisée (tests automatiques, déploiement). Plus de 100 commits.</p>
+            </div>
           </div>
           <div class="project-media media-edt reveal">
             <div class="browser">
@@ -233,12 +236,13 @@
           <div class="project-text reveal">
             <p class="project-kicker"><span class="dot"></span>Application iOS · Produit en lancement</p>
             <h3>Lockd</h3>
-            <p class="project-pitch">Tiens tes objectifs. Sinon, ta mise part à une bonne cause.</p>
+            <p class="project-pitch">Une app iPhone pour tenir ses objectifs, en mettant de l'argent en jeu.</p>
             <ul class="points">
-              <li><b>Règles d'argent dans la base</b> : un trigger Postgres impose la machine à états, même au compte admin.</li>
-              <li><b>Consentements infalsifiables</b> : signatures immuables, chaînées par hash.</li>
-              <li><b>64 tests</b> sur trois couches : pgTAP, Deno et XCTest.</li>
+              <li><b>Tu fixes un objectif vérifiable</b>, par exemple aller à la salle 3 fois par semaine, et tu engages une somme dessus.</li>
+              <li><b>Tu prouves que tu l'as tenu</b> en envoyant une photo.</li>
+              <li><b>Réussi, tu gardes tout. Raté</b>, la somme va à une association que tu as choisie.</li>
             </ul>
+            <p class="role"><b>Mon rôle</b> L'app iPhone, le serveur et les paiements. 64 tests automatiques protègent les règles d'argent.</p>
             <p class="stack">SwiftUI · Supabase · PostgreSQL · Deno</p>
             <a class="link" href="https://lockd.fr" target="_blank" rel="noopener">lockd.fr <span aria-hidden="true">↗</span></a>
           </div>
@@ -258,11 +262,12 @@
           <div class="project-text reveal">
             <p class="project-kicker"><span class="dot"></span>Application web · Client réel</p>
             <h3>Ma ferme</h3>
-            <p class="project-pitch">Le registre d'un élevage ovin, dans la poche de l'éleveur.</p>
+            <p class="project-pitch">L'application de gestion d'un élevage de moutons, faite sur mesure pour un éleveur.</p>
             <ul class="points">
-              <li><b>Remplace deux anciennes applications</b>, avec import des données et fusion sans doublon.</li>
-              <li><b>Délais vétérinaires calculés et figés</b> : la vente est bloquée tant qu'ils courent.</li>
-              <li><b>Testée de bout en bout</b> : Vitest sur une vraie base, parcours Playwright sur mobile.</li>
+              <li><b>Suit chaque animal</b> : naissances, traitements, lots, ventes et morts, avec un bilan de l'année.</li>
+              <li><b>Respecte les règles vétérinaires</b> : après un traitement, la vente est bloquée tant que le délai d'attente n'est pas écoulé.</li>
+              <li><b>Remplit les papiers tout seul</b> : le document de circulation est prêt au moment de la vente.</li>
+              <li><b>Remplace ses deux anciennes applis</b>, en récupérant toutes ses données, et s'utilise au champ sur téléphone.</li>
             </ul>
             <p class="stack">Next.js · Drizzle · PostgreSQL · Playwright</p>
           </div>
@@ -278,12 +283,13 @@
           <div class="project-text reveal">
             <p class="project-kicker"><span class="dot"></span>Stage de recherche IA · Aberdeen, Écosse</p>
             <h3>We vs Them</h3>
-            <p class="project-pitch">Détecter la polarisation « nous contre eux » sur les réseaux sociaux.</p>
+            <p class="project-pitch">Un outil de recherche qui repère les discours « nous contre eux » sur les réseaux sociaux.</p>
             <ul class="points">
-              <li><b>45 000+ commentaires</b> de Reddit, X, TikTok et Instagram, analysés par dépendances syntaxiques avec spaCy.</li>
-              <li><b>Toxicité et sentiment</b> (Toxic-BERT, RoBERTa), expliqués mot par mot avec SHAP et LIME.</li>
-              <li><b>Un assistant qui répond sur les données</b> : FAISS, LangChain, Qwen2.5. Le tout en anglais, en 10 semaines.</li>
+              <li><b>Analyse plus de 45 000 commentaires</b> venant de Reddit, X, TikTok et Instagram.</li>
+              <li><b>Repère les messages qui opposent deux camps</b>, puis mesure leur toxicité et leur ton.</li>
+              <li><b>Explique chaque résultat</b> mot par mot, et un assistant IA répond aux questions sur les données.</li>
             </ul>
+            <p class="role"><b>Mon rôle</b> Projet de recherche mené pendant mon stage de 10 semaines à Robert Gordon University, entièrement en anglais.</p>
             <p class="stack">Python · spaCy · PyTorch · LangChain · Streamlit</p>
             <a class="link" href="https://github.com/julesgayet/we-vs-them-analysis" target="_blank" rel="noopener">Code source <span aria-hidden="true">↗</span></a>
           </div>
@@ -299,11 +305,11 @@
           <div class="project-text reveal">
             <p class="project-kicker"><span class="dot"></span>E-commerce · Projet personnel</p>
             <h3>Sleevr</h3>
-            <p class="project-pitch">Une boutique premium de protections pour collectionneurs, du catalogue au paiement.</p>
+            <p class="project-pitch">Une boutique en ligne de protections pour les collectionneurs de cartes.</p>
             <ul class="points">
-              <li><b>Paiement Stripe</b>, compte client et suivi de commande.</li>
-              <li><b>Back-office</b> pour gérer produits et commandes.</li>
-              <li><b>Rendu serveur</b> Next.js, animations GSAP, globe interactif en d3.</li>
+              <li><b>Vend des boîtiers, classeurs et sleeves</b> pour protéger et exposer une collection.</li>
+              <li><b>Paiement en ligne sécurisé</b>, compte client et suivi de commande.</li>
+              <li><b>Un espace admin</b> pour gérer les produits, les stocks et les commandes.</li>
             </ul>
             <p class="stack">Next.js · Supabase · Stripe · GSAP</p>
             <a class="link" href="https://sleevr.fr" target="_blank" rel="noopener">sleevr.fr <span aria-hidden="true">↗</span></a>
