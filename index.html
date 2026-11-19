@@ -7,7 +7,7 @@
   <meta name="description" content="Jules Gayet, développeur full-stack en alternance à la CAF de la Haute-Vienne et en 3e année de BUT Informatique à Limoges. Vise un master en informatique pour la rentrée 2027.">
   <meta property="og:title" content="Jules Gayet · Développeur full-stack">
   <meta property="og:description" content="Applications web et mobiles, de la base de données à l'interface. Alternant à la CAF de la Haute-Vienne, BUT Informatique 3e année.">
-  <meta property="og:image" content="assets/img/troupeau-desk.webp">
+  <meta property="og:image" content="assets/img/edt-timetable.webp">
   <meta name="theme-color" content="#f4f5f2">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -69,6 +69,10 @@
 
       <!-- Chiffres clés : uniquement des chiffres vérifiables -->
       <div class="wrap stats">
+        <a class="stat reveal" href="#edt">
+          <span class="stat-n"><span data-count="100">100</span><small>+</small></span>
+          <span class="stat-l">commits sur Unilim EDT, l'outil d'emplois du temps de l'IUT</span>
+        </a>
         <a class="stat reveal" href="#we-vs-them">
           <span class="stat-n"><span data-count="10">10</span> <small>semaines</small></span>
           <span class="stat-l">de recherche en IA à Robert Gordon University, Aberdeen</span>
@@ -76,10 +80,6 @@
         <a class="stat reveal" href="#we-vs-them">
           <span class="stat-n"><span data-count="45000">45 000</span><small>+</small></span>
           <span class="stat-l">commentaires de réseaux sociaux analysés par mon pipeline NLP</span>
-        </a>
-        <a class="stat reveal" href="#edt">
-          <span class="stat-n"><span data-count="100">100</span><small>+</small></span>
-          <span class="stat-l">commits sur l'application d'emplois du temps de l'IUT</span>
         </a>
         <a class="stat reveal" href="#lockd">
           <span class="stat-n"><span data-count="64">64</span></span>
@@ -94,20 +94,144 @@
         <header class="sec-head reveal">
           <p class="eyebrow">Projets</p>
           <h2>Des applications livrées,<br><span class="muted">pas des exercices.</span></h2>
-          <p class="sec-sub">Un client réel, une application en production à l'IUT, un stage de recherche et deux produits à moi.</p>
+          <p class="sec-sub">Une application en production à l'IUT, un produit en lancement, un client réel et un stage de recherche.</p>
         </header>
       </div>
 
+      <!-- UNILIM EDT : projet phare -->
+      <article id="edt" class="project project-feature" style="--tint:#f6e9ea; --tint-ink:#b0182a">
+        <div class="wrap">
+          <div class="feature-head reveal">
+            <div>
+              <p class="project-kicker"><span class="dot"></span>Projet phare · En production à l'IUT · Équipe de 4</p>
+              <h3>Unilim EDT</h3>
+              <p class="project-pitch">Le générateur d'emplois du temps de l'IUT de Limoges. Les trois promotions planifiées en un clic, sans conflit de salle ni d'enseignant.</p>
+              <p class="stack">Laravel · Vue 3 · Python / OR-Tools · MariaDB · Docker</p>
+            </div>
+            <ul class="points">
+              <li><b>Alertes du prévisionnel</b> : je détecte les surcharges d'enseignants et de groupes, puis je propose une correction applicable en un clic.</li>
+              <li><b>Solveur</b> : cours fixés, salles d'examen et samedis respectés par le générateur.</li>
+              <li><b>CI/CD et sécurité</b> : lint, tests, audit des dépendances, déploiement plus sûr, durcissement de l'API. Plus de 100 commits de ma part.</li>
+            </ul>
+          </div>
+          <div class="project-media media-edt reveal">
+            <div class="browser">
+              <div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>Unilim EDT · Emploi du temps</span></div>
+              <img src="assets/img/edt-timetable.webp" width="2000" height="1250" alt="Unilim EDT : emploi du temps d'une semaine de BUT 1, cours colorés par type" loading="lazy">
+            </div>
+            <div class="browser browser-float">
+              <div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>Statistiques</span></div>
+              <img src="assets/img/edt-stats.webp" width="2000" height="1250" alt="Unilim EDT : statistiques de séances, d'enseignants et de salles" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </article>
+
       <!-- LOCKD -->
-      <article id="lockd" class="project" style="--tint:#e8edff; --tint-ink:#2c4bd6">
+      <article id="lockd" class="project" style="--tint:#e9edff; --tint-ink:#3b4fe0">
         <div class="wrap project-grid">
-          <div class="project-media media-phones reveal">
-            <img src="assets/img/lockd-mise.webp" width="640" height="1391" alt="Lockd : choix de la somme mise en jeu" loading="lazy">
-            <img src="assets/img/lockd-home.webp" width="640" height="1391" alt="Lockd : écran d'accueil" loading="lazy">
-            <img src="assets/img/lockd-signature.webp" width="640" height="1391" alt="Lockd : signature de l'engagement" loading="lazy">
+          <div class="project-media media-lockd reveal">
+            <div class="iphone-stage" id="lkStage">
+              <div class="iphone" id="lkPhone" aria-hidden="true">
+                <div class="iphone__body"></div>
+                <div class="iphone__screen"></div>
+                <div class="iphone__island"></div>
+
+                <div class="ui-page" data-i="0">
+                  <div class="ui-layer ui-status"><span>10:22</span><span class="ui-status__icons">●●● ▮</span></div>
+                  <div class="ui-flow">
+                    <div class="ui-title"><strong>Tes objectifs</strong><small>50 € en jeu sur 3 objectifs</small></div>
+                    <div class="ui-sub">Ta régularité</div>
+                    <div class="ui-card ui-heat">
+                      <div class="ui-heat__grid"><span>L</span><i class=""></i><i class=""></i><i class=""></i><i
+                          class=""></i><i class=""></i><i class="k"></i><i class="k"></i><i class="k"></i><i
+                          class="f"></i><i class="k"></i><i class="k"></i><i class=""></i><span>M</span><i
+                          class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i
+                          class="k"></i><i class="k"></i><i class=""></i><i class="k"></i><i class=""></i><i
+                          class="k"></i><i class="k"></i><span>M</span><i class=""></i><i class=""></i><i
+                          class=""></i><i class=""></i><i class=""></i><i class="k"></i><i class="k"></i><i
+                          class="k"></i><i class="k"></i><i class="k"></i><i class="k"></i><i
+                          class=""></i><span>J</span><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i
+                          class=""></i><i class="k"></i><i class="k"></i><i class=""></i><i class="k"></i><i
+                          class="k"></i><i class="f"></i><i class="f"></i><span>V</span><i class=""></i><i
+                          class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i
+                          class="k"></i><i class=""></i><i class=""></i><i class="k"></i><i class="k"></i><i
+                          class="k"></i><span>S</span><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i
+                          class=""></i><i class="k"></i><i class=""></i><i class="k"></i><i class="k"></i><i
+                          class="k"></i><i class="k"></i><i class=""></i><span>D</span><i class=""></i><i
+                          class=""></i><i class=""></i><i class=""></i><i class=""></i><i class="k"></i><i
+                          class=""></i><i class="k"></i><i class=""></i><i class="f"></i><i class="k"></i><i
+                          class="k"></i></div>
+                      <div class="ui-heat__legend"><em class="k"></em>Tenu <em class="f"></em>Manqué <em></em>Pas</div>
+                    </div>
+                    <div class="ui-stats">
+                      <div class="ui-card"><b>2</b><small>jours de suite</small></div>
+                      <div class="ui-card"><b>27</b><small>objectifs tenus</small></div>
+                      <div class="ui-card"><b>3</b><small>en cours</small></div>
+                    </div>
+                    <div class="ui-label">En cours</div>
+                    <div class="ui-card ui-goal">
+                      <span class="ui-pill">Preuve attendue</span>
+                      <b>Me lever 3 fois cette semaine</b>
+                      <small>📷 Photo du lit fait · Preuve attendue</small>
+                    </div>
+                    <div class="ui-card ui-goal ui-goal--2">
+                      <span class="ui-pill ui-pill--ok">Engagé</span>
+                    </div>
+                  </div>
+                  <div class="ui-layer ui-tabbar">
+                    <span class="on">⌂</span><span>🔔</span><span class="plus">+</span><span>↺</span><span>💬</span>
+                  </div>
+                </div>
+
+                <div class="ui-page" data-i="1">
+                  <div class="ui-layer ui-status"><span>10:25</span><span class="ui-status__icons">●●● ▮</span></div>
+                  <div class="ui-layer ui-center" style="top:62px"><b>Profil</b></div>
+                  <div class="ui-layer ui-center" style="top:96px"><span class="ui-avatar">🧑</span><b>Compte
+                      connecté</b><small>Tes objectifs te suivent sur tous tes appareils</small></div>
+                  <div class="ui-layer ui-section" style="top:222px">CE QUE TU RISQUES</div>
+                  <div class="ui-layer ui-card ui-list" style="top:242px">
+                    <span>Plafond par engagement<em>100 €</em></span><span>Plafond mensuel<em>150
+                        €</em></span><span>Moyen de paiement<em>•••• 4242</em></span><span>Association choisie<em>La
+                        SPA</em></span>
+                  </div>
+                  <div class="ui-layer ui-section" style="top:412px">RÉGLAGES</div>
+                  <div class="ui-layer ui-card ui-list" style="top:432px">
+                    <span>Notifications<em>›</em></span><span>Aide<em>›</em></span><span>Se déconnecter<em></em></span>
+                  </div>
+                </div>
+
+                <div class="ui-page" data-i="2">
+                  <div class="ui-layer ui-status"><span>10:24</span><span class="ui-status__icons">●●● ▮</span></div>
+                  <div class="ui-layer ui-dots" style="top:64px"><i class="on"></i><i class="on"></i><i
+                      class="on"></i><i></i><i></i></div>
+                  <div class="ui-layer ui-sentence" style="top:92px">Je me promets d'aller à la salle</div>
+                  <div class="ui-layer ui-sentence ui-sentence--sm" style="top:162px"><span class="ui-box">3</span> fois
+                    cette semaine</div>
+                  <div class="ui-layer" style="top:226px"><b class="ui-q">Quels jours ?</b><small class="ui-hint">Encore
+                      un jour à choisir.</small></div>
+                  <div class="ui-layer ui-days" style="top:272px"><i class="on">L</i><i>M</i><i>M</i><i>J</i><i>V</i><i
+                      class="on">S</i><i>D</i></div>
+                  <div class="ui-layer ui-card ui-time" style="top:326px">
+                    <b>Lundi</b>
+                    <div class="ui-seg"><span class="on">Je sais l'heure</span><span>Le matin même</span></div>
+                    <div class="ui-wheel"><small>06</small><b>07 : 00</b><small>08 · 05</small></div>
+                  </div>
+                  <div class="ui-layer ui-btn ui-btn--off" style="top:524px">Continuer →</div>
+                </div>
+
+                <div class="ui-page" data-i="3">
+                  <div class="ui-layer ui-status"><span>10:24</span><span class="ui-status__icons">●●● ▮</span></div>
+                  <div class="ui-layer ui-center" style="top:200px"><span class="ui-check">✓</span></div>
+                  <div class="ui-layer ui-center" style="top:292px"><b class="ui-big">Tu t'es engagé.</b><small>10 €
+                      engagés · signature enregistrée à 10 h 24</small></div>
+                  <div class="ui-layer ui-btn" style="top:380px">Terminer</div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="project-text reveal">
-            <p class="project-kicker"><span class="dot"></span>Application iOS · Projet personnel</p>
+            <p class="project-kicker"><span class="dot"></span>Application iOS · Produit en lancement</p>
             <h3>Lockd</h3>
             <p class="project-pitch">Tiens tes objectifs. Sinon, ta mise part à une bonne cause.</p>
             <ul class="points">
@@ -116,24 +240,24 @@
               <li><b>64 tests</b> sur trois couches : pgTAP, Deno et XCTest.</li>
             </ul>
             <p class="stack">SwiftUI · Supabase · PostgreSQL · Deno</p>
-            <a class="link" href="https://lockd-landing-page.vercel.app" target="_blank" rel="noopener">Voir le site <span aria-hidden="true">↗</span></a>
+            <a class="link" href="https://lockd.fr" target="_blank" rel="noopener">lockd.fr <span aria-hidden="true">↗</span></a>
           </div>
         </div>
       </article>
 
-      <!-- MON TROUPEAU -->
-      <article id="troupeau" class="project project-flip" style="--tint:#e6f2e9; --tint-ink:#1f6b3a">
+      <!-- MA FERME -->
+      <article id="ferme" class="project project-flip" style="--tint:#e6f2e9; --tint-ink:#1f6b3a">
         <div class="wrap project-grid">
           <div class="project-media media-farm reveal">
             <div class="browser">
               <div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i></div>
-              <img src="assets/img/troupeau-desk.webp" width="1600" height="1000" alt="Mon troupeau : tableau de bord sur ordinateur" loading="lazy">
+              <img src="assets/img/troupeau-desk.webp" width="1600" height="1000" alt="Ma ferme : tableau de bord sur ordinateur" loading="lazy">
             </div>
-            <img class="phone-float" src="assets/img/troupeau-mob.webp" width="640" height="1385" alt="Mon troupeau : accueil sur téléphone" loading="lazy">
+            <img class="phone-float" src="assets/img/troupeau-mob.webp" width="640" height="1385" alt="Ma ferme : accueil sur téléphone" loading="lazy">
           </div>
           <div class="project-text reveal">
             <p class="project-kicker"><span class="dot"></span>Application web · Client réel</p>
-            <h3>Mon troupeau</h3>
+            <h3>Ma ferme</h3>
             <p class="project-pitch">Le registre d'un élevage ovin, dans la poche de l'éleveur.</p>
             <ul class="points">
               <li><b>Remplace deux anciennes applications</b>, avec import des données et fusion sans doublon.</li>
@@ -166,58 +290,23 @@
         </div>
       </article>
 
-      <!-- EDT IUT -->
-      <article id="edt" class="project project-flip" style="--tint:#ecedf0; --tint-ink:#33373f">
-        <div class="wrap project-grid">
-          <div class="project-media media-log reveal">
-            <div class="term" role="img" aria-label="Extraits de mes commits sur le projet">
-              <div class="term-bar" aria-hidden="true"><i></i><i></i><i></i><span>git log --author="Jules"</span></div>
-              <ol class="term-body">
-                <li><span class="t-type">feat</span><span class="t-scope">(previsionnel)</span> suggest a fix for each forecast alert</li>
-                <li><span class="t-type">feat</span><span class="t-scope">(previsionnel)</span> compute workload and maquette alerts for a year</li>
-                <li><span class="t-type">fix</span><span class="t-scope">(generator)</span> honour fixed courses and exam rooms in the solver</li>
-                <li><span class="t-type">fix</span><span class="t-scope">(security)</span> stop shipping a public internal API token</li>
-                <li><span class="t-type">ci</span> add lint, solver tests, integration and safer deploy</li>
-                <li><span class="t-type">ci</span> audit PHP and JS dependencies, weekly Dependabot</li>
-                <li><span class="t-type">feat</span><span class="t-scope">(edt)</span> fit the timetable to the screen, no scroll</li>
-                <li class="t-more">… et une centaine d'autres, sept. → nov. 2026</li>
-              </ol>
-            </div>
-          </div>
-          <div class="project-text reveal">
-            <p class="project-kicker"><span class="dot"></span>Projet BUT · En production à l'IUT · Équipe de 4</p>
-            <h3>Emplois du temps de l'IUT</h3>
-            <p class="project-pitch">L'application qui génère les emplois du temps de l'IUT de Limoges.</p>
-            <ul class="points">
-              <li><b>Alertes du prévisionnel</b> : je détecte les surcharges d'enseignants et d'étudiants, puis je propose une correction applicable en un clic.</li>
-              <li><b>Solveur</b> : contraintes de cours fixés, de salles d'examen et de samedis respectées par le générateur.</li>
-              <li><b>CI/CD et sécurité</b> : lint, tests, audit des dépendances, déploiement plus sûr, durcissement de l'API.</li>
-            </ul>
-            <p class="stack">Laravel · Vue 3 · Python / OR-Tools · MariaDB · Docker</p>
-          </div>
-        </div>
-      </article>
-
       <!-- SLEEVR -->
-      <article id="sleevr" class="project" style="--tint:#ececec; --tint-ink:#111">
+      <article id="sleevr" class="project project-flip" style="--tint:#e9e9e9; --tint-ink:#111">
         <div class="wrap project-grid">
-          <div class="project-media media-browser reveal">
-            <div class="browser browser-dark">
-              <div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>sleevr-ecru.vercel.app</span></div>
-              <img src="assets/img/sleevr.webp" width="1600" height="1000" alt="Sleevr : page boutique" loading="lazy">
-            </div>
+          <div class="project-media media-shot reveal">
+            <img src="assets/img/sleevr-home.webp" width="2000" height="1250" alt="Sleevr : best-sellers et vitrine des boîtiers acryliques" loading="lazy">
           </div>
           <div class="project-text reveal">
             <p class="project-kicker"><span class="dot"></span>E-commerce · Projet personnel</p>
             <h3>Sleevr</h3>
-            <p class="project-pitch">Une boutique premium d'étuis pour collectionneurs, du catalogue au paiement.</p>
+            <p class="project-pitch">Une boutique premium de protections pour collectionneurs, du catalogue au paiement.</p>
             <ul class="points">
               <li><b>Paiement Stripe</b>, compte client et suivi de commande.</li>
               <li><b>Back-office</b> pour gérer produits et commandes.</li>
               <li><b>Rendu serveur</b> Next.js, animations GSAP, globe interactif en d3.</li>
             </ul>
             <p class="stack">Next.js · Supabase · Stripe · GSAP</p>
-            <a class="link" href="https://sleevr-ecru.vercel.app" target="_blank" rel="noopener">Voir le site <span aria-hidden="true">↗</span></a>
+            <a class="link" href="https://sleevr.fr" target="_blank" rel="noopener">sleevr.fr <span aria-hidden="true">↗</span></a>
           </div>
         </div>
       </article>
@@ -318,7 +407,7 @@
           <div class="skill reveal">
             <h3>Web full-stack</h3>
             <p class="skill-list">Next.js · React · Vue 3 · Laravel · PHP · TypeScript</p>
-            <p class="proof">Prouvé sur <a href="#troupeau">Mon troupeau</a>, <a href="#edt">EDT de l'IUT</a>, <a href="#sleevr">Sleevr</a></p>
+            <p class="proof">Prouvé sur <a href="#ferme">Ma ferme</a>, <a href="#edt">Unilim EDT</a>, <a href="#sleevr">Sleevr</a></p>
           </div>
           <div class="skill reveal">
             <h3>Mobile</h3>
@@ -333,7 +422,7 @@
           <div class="skill reveal">
             <h3>Qualité &amp; DevOps</h3>
             <p class="skill-list">Vitest · Playwright · pgTAP · Docker · GitHub Actions · Linux</p>
-            <p class="proof">Prouvé sur <a href="#edt">EDT de l'IUT</a>, <a href="#troupeau">Mon troupeau</a>, <a href="#lockd">Lockd</a></p>
+            <p class="proof">Prouvé sur <a href="#edt">Unilim EDT</a>, <a href="#ferme">Ma ferme</a>, <a href="#lockd">Lockd</a></p>
           </div>
         </div>
       </div>
